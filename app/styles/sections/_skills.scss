@@ -2,6 +2,7 @@
 @use '../util/colors' as c;
 
 $small-skills: 900px;
+$mini-skills: 400px;
 
 .skills-container {
     display: flex;
@@ -14,6 +15,9 @@ $small-skills: 900px;
         font-weight: bold;
         @media screen and (max-width: $small-skills) {
             font-size: 3vw;
+        }
+        @media screen and (max-width: $mini-skills) {
+            font-size: 5vw;
         }
     }
     .skill-cards {
