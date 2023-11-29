@@ -1,0 +1,41 @@
+@use '../util/functions' as f;
+@use '../util/colors' as c;
+
+$small-skills: 900px;
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    p {
+        margin-top: 5%;
+        font-size: f.vw(30);
+        font-weight: bold;
+        @media screen and (max-width: $small-skills) {
+            font-size: 5vw;
+        }
+    }
+    .skill-cards {
+        display: flex;
+        @media screen {
+            
+        }
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px;
+        margin-top: 5%;
+        .card {
+            display: flex;
+            flex-direction: column;
+            width: 250px;
+            height: 250px;
+            max-height: 400px;
+            background-color: #3D3E42;
+            border-radius: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

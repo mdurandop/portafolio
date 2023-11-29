@@ -1,0 +1,20 @@
+@use '../util/functions' as f;
+@use '../util/colors' as c;
+
+$small-about: 900px;
+
+hr {
+    color: c.$main-color;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    p {
+        margin-top: 3%;
+        font-size: f.vw(32);
+        @media screen and (max-width: $small-about) {
+            font-size: 4.5vw;
+        }
+    }
+}

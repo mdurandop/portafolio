@@ -1,0 +1,20 @@
+$mobile-boiler: 400px;
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: inherit;
+    background: #383838;
+    margin-right: 130px;
+    margin-left: 130px;
+    margin-top: 50px;
+    @media screen and (max-width: $mobile-boiler) {
+        margin-right: 50px;
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+}
+

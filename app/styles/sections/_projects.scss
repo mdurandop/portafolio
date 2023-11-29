@@ -1,0 +1,68 @@
+@use '../util/functions' as f;
+@use '../util/colors' as c;
+
+$small-projects: 900px;
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    .project{
+        display: flex;
+        gap: f.vw(40);
+        margin-top: 5%;
+        margin-bottom: 5%;
+        @media screen and (max-width: $small-projects) {
+            flex-direction: column;
+        }
+        img {
+            @media screen and (max-width: $small-projects) {
+                width: 100%;
+            }
+        }
+        .project-info {
+            @media screen and (max-width: $small-projects) {
+                text-align: center;
+            }
+            h2 {
+                font-size: f.vw(40);
+                margin: 0;
+                margin-bottom: 10px;
+                @media screen and (max-width: $small-projects) {
+                   font-size: 7vw;
+                }
+            }
+            p {
+                margin-bottom: 20px;
+                font-size: f.vw(32);
+                @media screen and (max-width: $small-projects) {
+                    font-size: 5vw;
+                 }
+            }
+            .technology {
+                @media screen and (max-width: $small-projects) {
+                        margin: auto;
+                        margin-bottom: 10px;
+                    }
+                p {
+                    font-size: f.vw(20);
+                    font-weight: bold;
+                    margin-bottom: 2px;
+                    @media screen and (max-width: $small-projects) {
+                        font-size: 3.5vw;
+                     }
+                }
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100px;
+                margin-top: 10px;
+                color: white;
+                padding: 10px 30px 10px 30px;
+                border: 5px solid c.$main-color;
+                border-radius: 20px;
+            }
+        }
+    } 
+}

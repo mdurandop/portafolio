@@ -1,0 +1,83 @@
+@use '../util/functions' as f;
+@use '../util/colors' as c;
+
+$small-contact: 1200px;
+
+.contact-container {
+    display: flex;
+    gap: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    .contact-form {
+        @media screen and (max-width: $small-contact) {
+            display: none;
+        }
+        h1 {
+            padding-bottom: 20px;
+        }
+        input[type="text"] {
+            border-radius: 10px;
+            width: 550px;
+            height: 50px;
+            margin-bottom: 3%;
+        }
+        input[type="email"] {
+            width: 550px;
+            border-radius: 10px;
+            height: 50px;
+            margin-bottom: 3%;
+        }
+        #info {
+            height: 250px;
+        }
+        input[type="name"] {
+            border-radius: 10px;
+            width: 280px;
+            height: 50px;
+            margin-bottom: 3%;
+        }
+        label {
+            p{
+                font-size: f.vw(32);
+            }
+        }
+        button {
+            margin-top: 20px;
+            background-color: c.$main-color;
+            border: 1px solid c.$main-color;
+            font-size: f.vw(24);
+            padding: 10px 30px 10px 30px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+    }
+    .contact-message {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2 {
+            color: white;
+            font-size: f.vw(64);
+        }
+        .contact-m {
+            display: flex;
+            width: 100%;
+            padding: 10px;
+            gap: f.vw(20);
+            a, p {
+                font-size: f.vw(32);
+                margin-top: 7px;
+                &:hover {
+                    color: c.$main-color;
+                    
+                }
+                @media screen and (max-width: $small-contact) {
+                    display: flex;
+                    font-size: 4vw;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

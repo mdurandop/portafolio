@@ -1,0 +1,27 @@
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}
+
+@function vw($px-vw, $base-vw: 1920px){
+    @return #{strip-unit($px-vw) * 150 / strip-unit($base-vw)}vw;
+}
+
+$small-fonts: 800px;
+
+@media screen and (max-width: $small-fonts) {
+    @function strip-unit($number) {
+        @if type-of($number) == 'number' and not unitless($number) {
+            @return $number / ($number * 0 + 1);
+        }
+    
+        @return $number;
+    }
+    
+    @function vw($px-vw, $base-vw: 1920px){
+        @return #{strip-unit($px-vw) * 350 / strip-unit($base-vw)}vw;
+    }
+}
