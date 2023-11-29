@@ -10,10 +10,10 @@ $small-skills: 900px;
     margin-top: 5%;
     p {
         margin-top: 5%;
-        font-size: f.vw(30);
+        font-size: 2vw;
         font-weight: bold;
         @media screen and (max-width: $small-skills) {
-            font-size: 5vw;
+            font-size: 3vw;
         }
     }
     .skill-cards {

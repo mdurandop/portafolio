@@ -5,6 +5,16 @@ html {
     scroll-behavior: smooth;
 }
 
+::-moz-selection {
+    color: black;
+    background:#FFCB6B;
+}
+
+::selection {
+    color: black;
+    background: #FFCB6B;
+  }
+
 body {
     box-sizing: inherit;
     background: #383838;
