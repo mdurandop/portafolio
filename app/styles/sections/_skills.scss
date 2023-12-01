@@ -22,9 +22,6 @@ $mini-skills: 400px;
     }
     .skill-cards {
         display: flex;
-        @media screen {
-            
-        }
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
@@ -43,3 +40,5 @@ $mini-skills: 400px;
         }
     }
 }
+
+
